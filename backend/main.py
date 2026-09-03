@@ -97,13 +97,13 @@ class BuildIndexRequest(BaseModel):
 # Startup Event to Pre-warm Vector Index & Metadata
 @app.on_event("startup")
 def startup_event():
-    """Pre-warms FAISS vector index and report metadata on application startup."""
+    """Ensures runtime datasets are verified and pre-warms FAISS vector index."""
     try:
-        from recurrence import load_index
-        load_index()
-        logger.info("Startup: FAISS vector index and metadata successfully initialized.")
+        from bootstrap_data import bootstrap
+        bootstrap()
+        logger.info("Startup: Runtime datasets and FAISS vector index verified successfully.")
     except Exception as e:
-        logger.warning(f"Startup: Pre-warming index failed (will initialize on-demand): {e}")
+        logger.warning(f"Startup: Bootstrap verification error: {e}")
 
 
 # ============================================================================
