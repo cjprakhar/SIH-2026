@@ -1,0 +1,30 @@
+{
+  "life_saving_rules": [
+    "Bypassing Safety Controls",
+    "Confined Space",
+    "Driving",
+    "Energy Isolation",
+    "Hot Work",
+    "Line of Fire",
+    "Safe Mechanical Lifting",
+    "Toxic / Hazardous Substances",
+    "Work Authorization",
+    "Working at Height"
+  ],
+  "sif_precursors": [
+    "Falls from Height",
+    "Struck-By",
+    "Caught-In / Caught-Between",
+    "Line of Fire",
+    "Dropped Object",
+    "Hazardous Energy",
+    "Energy Isolation Failure",
+    "Confined Space",
+    "Vehicle / Mobile Equipment Interaction",
+    "Lifting / Rigging Failure",
+    "Hot Work",
+    "Pressure Release",
+    "Process Safety / Loss of Primary Containment",
+    "Bypassed / Inadequate Critical Control"
+  ]
+}

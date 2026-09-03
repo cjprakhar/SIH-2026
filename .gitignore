@@ -1,0 +1,49 @@
+# Secrets
+.env
+*.env
+backend/.env
+frontend/.env
+frontend/.env.*
+backend/.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Frontend build
+dist/
+frontend/dist/
+build/
+frontend/build/
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+
+# Generated/cache files
+*.log
+.DS_Store
+Thumbs.db
+
+# Required runtime data is intentionally versioned (with Git LFS where large):
+# backend/data/reports.json
+# backend/data/index/
+# backend/data/taxonomy.json
+
+# Generated evaluation artifacts
+backend/scratch_eval.py
+backend/scratch_validation_results.json

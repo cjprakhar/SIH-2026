@@ -1,0 +1,853 @@
+[
+  {
+    "pattern_id": "line-of-fire-dropped-object",
+    "pattern": "Recurring safety pattern detected: Line of Fire / Dropped Object",
+    "title": "Line of Fire / Dropped Object",
+    "occurrences": 25,
+    "strength": 0.46,
+    "average_strength": 0.2,
+    "primary_life_saving_rule": "Line of Fire",
+    "primary_sif_precursor": "Dropped Object",
+    "common_locations": [
+      "United States",
+      "USA",
+      "India",
+      "Thailand"
+    ],
+    "common_equipment": [
+      "Crane / Hoist",
+      "Rigging Equipment",
+      "Truck",
+      "Ladder",
+      "Lifting Sling"
+    ],
+    "common_hazards": [
+      "Fire / Flash Fire",
+      "Dropped Object",
+      "Struck-By Object",
+      "Fall from Height",
+      "Overhead Hazard"
+    ],
+    "common_failed_barriers": [
+      "Improper rigging, deviation from the approved lifting method",
+      "On 18 May 2022 at 0700 hrs., after completing crew change ac",
+      "The master bypass for the anti-blocking system was left enga"
+    ],
+    "common_exposures": [
+      "Employee",
+      "Operator",
+      "Rigger",
+      "Worker"
+    ],
+    "common_consequences": [
+      "Fractures",
+      "Dropped objects",
+      "Soreness, pain, hurt-nonspecified injury",
+      "Caught in, under or between (excl. dropped objects)"
+    ],
+    "associated_life_saving_rules": [
+      "Line of Fire",
+      "Safe Mechanical Lifting"
+    ],
+    "associated_activities": [
+      "Lifting, crane, rigging, deck operations",
+      "Struck by object falling from vehicle or machinery-other tha",
+      "Struck by falling object or equipment, n.e.c.",
+      "Vehicle or machinery fire"
+    ],
+    "report_ids": [
+      "2025sf-AS-ON-003",
+      "2022sh-AS-OF-009",
+      "2022sh-NA-AM-ON-005",
+      "OSHA-2015118231",
+      "2021sh-NA-AM-OF-001",
+      "OSHA-2025065306",
+      "OSHA-2020087900",
+      "OSHA-20231110723",
+      "2025sf-RU-&-CA-001",
+      "OSHA-2015010523"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "2025sf-AS-ON-003",
+        "date": "2025-09-10",
+        "location": "India",
+        "activity": "Lifting, crane, rigging, deck operations",
+        "cause": "Dropped objects",
+        "similarity": 0.6368,
+        "source_file": "2025sf.pdf"
+      },
+      {
+        "report_id": "2022sh-AS-OF-009",
+        "date": "2022-05-18",
+        "location": "Thailand",
+        "activity": "Lifting, crane, rigging, deck operations",
+        "cause": "Dropped objects",
+        "similarity": 0.5654,
+        "source_file": "2022sh.pdf"
+      },
+      {
+        "report_id": "2022sh-NA-AM-ON-005",
+        "date": "2022-12-05",
+        "location": "Canada",
+        "activity": "Lifting, crane, rigging, deck operations",
+        "cause": "Dropped objects",
+        "similarity": 0.5555,
+        "source_file": "2022sh.pdf"
+      }
+    ]
+  },
+  {
+    "pattern_id": "working-at-height-scaffolding",
+    "pattern": "Recurring safety pattern detected: Working at Height & Scaffold Fall",
+    "title": "Working at Height & Scaffold Fall",
+    "occurrences": 25,
+    "strength": 0.46,
+    "average_strength": 0.22,
+    "primary_life_saving_rule": "Working at Height",
+    "primary_sif_precursor": "Falls from Height",
+    "common_locations": [
+      "United States",
+      "Malaysia"
+    ],
+    "common_equipment": [
+      "Scaffold / Work Platform",
+      "Ladder",
+      "Safety Harness"
+    ],
+    "common_hazards": [
+      "Fall from Height",
+      "Slip / Trip"
+    ],
+    "common_failed_barriers": [
+      "During the incident, the scaffolder was dismantling the cant"
+    ],
+    "common_exposures": [
+      "Employee"
+    ],
+    "common_consequences": [
+      "Fractures",
+      "Traumatic injuries and disorders, unspecified",
+      "Cuts, lacerations",
+      "Soreness, pain, hurt-nonspecified injury"
+    ],
+    "associated_life_saving_rules": [
+      "Working at Height"
+    ],
+    "associated_activities": [
+      "Other fall to lower level 11 to 15 feet",
+      "Other fall to lower level 6 to 10 feet",
+      "Other fall to lower level, unspecified",
+      "Other fall to lower level less than 6 feet"
+    ],
+    "report_ids": [
+      "OSHA-2020087313",
+      "OSHA-2021075409",
+      "OSHA-2016087834",
+      "OSHA-2017088081",
+      "OSHA-2023098908",
+      "OSHA-2015085364",
+      "OSHA-2020065728",
+      "OSHA-2023043156",
+      "OSHA-2015129906",
+      "OSHA-2022065532"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "OSHA-2020087313",
+        "date": "2020-08-03",
+        "location": "United States",
+        "activity": "Other fall to lower level 11 to 15 feet",
+        "cause": "Fractures",
+        "similarity": 0.649,
+        "source_file": "January2015toNovember2025.csv"
+      },
+      {
+        "report_id": "OSHA-2021075409",
+        "date": "2021-07-01",
+        "location": "United States",
+        "activity": "Other fall to lower level 21 to 25 feet",
+        "cause": "Traumatic injuries and disorders, unspecified",
+        "similarity": 0.6223,
+        "source_file": "January2015toNovember2025.csv"
+      },
+      {
+        "report_id": "OSHA-2016087834",
+        "date": "2016-08-20",
+        "location": "United States",
+        "activity": "Other fall to lower level less than 6 feet",
+        "cause": "Cuts, lacerations",
+        "similarity": 0.6221,
+        "source_file": "January2015toNovember2025.csv"
+      }
+    ]
+  },
+  {
+    "pattern_id": "confined-space-entry",
+    "pattern": "Recurring safety pattern detected: Confined Space & Hazardous Atmosphere",
+    "title": "Confined Space & Hazardous Atmosphere",
+    "occurrences": 25,
+    "strength": 0.46,
+    "average_strength": 0.07,
+    "primary_life_saving_rule": "Confined Space",
+    "primary_sif_precursor": "Confined Space",
+    "common_locations": [
+      "United States",
+      "Qatar",
+      "UK",
+      "Angola"
+    ],
+    "common_equipment": [
+      "Storage Tank",
+      "Valve",
+      "Pump",
+      "Flange",
+      "Compressor"
+    ],
+    "common_hazards": [
+      "Toxic Substance",
+      "Chemical Exposure",
+      "Pressure Release",
+      "Confined Space / Oxygen Deficiency",
+      "Oxygen Deficiency"
+    ],
+    "common_failed_barriers": [
+      "• Sustain Barriers: The IP entered a restricted area to perf",
+      "The break of containment (BOC) checklist was followed but wa",
+      "• Monthly vacuum valve function test conducted the day prior"
+    ],
+    "common_exposures": [
+      "Employee",
+      "Maintenance Personnel",
+      "Technician",
+      "Rigger"
+    ],
+    "common_consequences": [
+      "Other respiratory system symptoms-toxic, noxious, or allerge",
+      "Poisoning, toxic, noxious, or allergenic effect, unspecified",
+      "Poison, toxic, or allergenic effects other respiratory",
+      "Confined space"
+    ],
+    "associated_life_saving_rules": [
+      "Confined Space",
+      "Bypassing Safety Controls",
+      "Energy Isolation"
+    ],
+    "associated_activities": [
+      "Inhalation of harmful substance-single episode",
+      "Production operations",
+      "Maintenance, inspection, testing",
+      "Inhalation of harmful substance single episode or single shi"
+    ],
+    "report_ids": [
+      "2024sf-NA-AM-ON-001",
+      "2023sh-EU-OF-009",
+      "OSHA-20191010554",
+      "OSHA-2021032638",
+      "OSHA-20161110891",
+      "2020pfh-AF-OF-006",
+      "2021sh-AF-ON-009",
+      "OSHA-2023054237",
+      "2025pfh-RU-&-CA-005",
+      "OSHA-2020099265"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "2024sf-NA-AM-ON-001",
+        "date": "2024-02-19",
+        "location": "Qatar",
+        "activity": "Production operations",
+        "cause": "Confined space",
+        "similarity": 0.5643,
+        "source_file": "2024sf.pdf"
+      },
+      {
+        "report_id": "2023sh-EU-OF-009",
+        "date": "2023-08-15",
+        "location": "UK",
+        "activity": "Maintenance, inspection, testing",
+        "cause": "Exposure noise, chemical, biological, vibration, extreme temperature",
+        "similarity": 0.5284,
+        "source_file": "2023sh.pdf"
+      },
+      {
+        "report_id": "OSHA-20191010554",
+        "date": "2019-10-09",
+        "location": "United States",
+        "activity": "Inhalation of harmful substance-single episode",
+        "cause": "Other respiratory system symptoms-toxic, noxious, or allergenic effect",
+        "similarity": 0.4998,
+        "source_file": "January2015toNovember2025.csv"
+      }
+    ]
+  },
+  {
+    "pattern_id": "safe-mechanical-lifting",
+    "pattern": "Recurring safety pattern detected: Safe Mechanical Lifting & Rigging Failure",
+    "title": "Safe Mechanical Lifting & Rigging Failure",
+    "occurrences": 25,
+    "strength": 0.46,
+    "average_strength": 0.13,
+    "primary_life_saving_rule": "Safe Mechanical Lifting",
+    "primary_sif_precursor": "Lifting / Rigging Failure",
+    "common_locations": [
+      "United States",
+      "Algeria",
+      "Netherlands",
+      "USA"
+    ],
+    "common_equipment": [
+      "Crane / Hoist",
+      "Lifting Sling",
+      "Forklift",
+      "Rigging Equipment",
+      "Drill"
+    ],
+    "common_hazards": [
+      "Fall from Height",
+      "Dropped Object",
+      "Overhead Hazard",
+      "Struck-By Object",
+      "Caught-In / Pinch Point"
+    ],
+    "common_failed_barriers": [
+      "The operation was a rig move (dismantling the rig parts and ",
+      "Operating Equipment: obstructed or restricted workplace/haza",
+      "• Lock out Tag Out Not utilized. • No breakaway or controlle"
+    ],
+    "common_exposures": [
+      "Employee",
+      "Operator",
+      "Contractor",
+      "Driver"
+    ],
+    "common_consequences": [
+      "Fractures",
+      "Dropped objects",
+      "Caught in, under or between (excl. dropped objects)",
+      "Unspecified - Other"
+    ],
+    "associated_life_saving_rules": [
+      "Safe Mechanical Lifting",
+      "Bypassing Safety Controls"
+    ],
+    "associated_activities": [
+      "Lifting, crane, rigging, deck operations",
+      "Struck by object falling from vehicle or machinery-other tha",
+      "Other fall to lower level 16 to 20 feet",
+      "Jack-knifed or overturned, nonroadway"
+    ],
+    "report_ids": [
+      "OSHA-20171212240",
+      "2022sh-AF-ON-001",
+      "2021sh-EU-OF-005",
+      "OSHA-20191010524",
+      "2022sh-NA-AM-ON-009",
+      "OSHA-20161111021",
+      "OSHA-2018055227",
+      "OSHA-20191212827",
+      "OSHA-2025099031",
+      "OSHA-2018088441"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "OSHA-20171212240",
+        "date": "2017-12-27",
+        "location": "United States",
+        "activity": "Struck by swinging or slipping object, other than handheld, ",
+        "cause": "Fractures",
+        "similarity": 0.5806,
+        "source_file": "January2015toNovember2025.csv"
+      },
+      {
+        "report_id": "2022sh-AF-ON-001",
+        "date": "2022-04-06",
+        "location": "Algeria",
+        "activity": "Lifting, crane, rigging, deck operations",
+        "cause": "Caught in, under or between (excl. dropped objects)",
+        "similarity": 0.5788,
+        "source_file": "2022sh.pdf"
+      },
+      {
+        "report_id": "2021sh-EU-OF-005",
+        "date": "2021-06-05",
+        "location": "Netherlands",
+        "activity": "Lifting, crane, rigging, deck operations",
+        "cause": "Unspecified - Other",
+        "similarity": 0.5714,
+        "source_file": "2021sh.pdf"
+      }
+    ]
+  },
+  {
+    "pattern_id": "vehicle-driving-transport",
+    "pattern": "Recurring safety pattern detected: Vehicle / Mobile Equipment & Driving Incidents",
+    "title": "Vehicle / Mobile Equipment & Driving Incidents",
+    "occurrences": 25,
+    "strength": 0.46,
+    "average_strength": 0.22,
+    "primary_life_saving_rule": "Driving",
+    "primary_sif_precursor": "Vehicle / Mobile Equipment Interaction",
+    "common_locations": [
+      "United States",
+      "USA",
+      "Canada",
+      "Azerbaijan"
+    ],
+    "common_equipment": [
+      "Truck",
+      "Vehicle"
+    ],
+    "common_hazards": [
+      "Struck-By Object",
+      "Dropped Object",
+      "Fall from Height",
+      "Caught-In / Pinch Point",
+      "Vehicle Collision"
+    ],
+    "common_failed_barriers": [
+      "Lack of communication between workers.",
+      "The driver of the pickup was over driving road conditions an",
+      "The driver did not know the route well and could not determi"
+    ],
+    "common_exposures": [
+      "Employee",
+      "Driver",
+      "Worker",
+      "Contractor"
+    ],
+    "common_consequences": [
+      "Soreness, pain, hurt-nonspecified injury",
+      "Fractures",
+      "Traumatic injuries and disorders, unspecified",
+      "Caught in, under or between (excl. dropped objects)"
+    ],
+    "associated_life_saving_rules": [
+      "Driving"
+    ],
+    "associated_activities": [
+      "Struck or run over by rolling powered vehicle",
+      "Roadway collision with other vehicle(s) moving and standing",
+      "Nonroadway collision with object other than vehicle, n.e.c.",
+      "Transport - Land"
+    ],
+    "report_ids": [
+      "OSHA-20241110316",
+      "2024sf-NA-AM-ON-003",
+      "OSHA-20251111426",
+      "OSHA-20181212380",
+      "OSHA-2020043223",
+      "OSHA-2015020768",
+      "2022sh-NA-AM-ON-004",
+      "OSHA-2015052172",
+      "OSHA-2022065293",
+      "OSHA-2020066000"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "OSHA-20241110316",
+        "date": "2024-11-05",
+        "location": "United States",
+        "activity": "Roadway collision with other vehicle(s) moving in same direc",
+        "cause": "Injuries to the brain, spinal cord and severe wounds, internal injuries",
+        "similarity": 0.5919,
+        "source_file": "January2015toNovember2025.csv"
+      },
+      {
+        "report_id": "2024sf-NA-AM-ON-003",
+        "date": "2024-04-24",
+        "location": "USA",
+        "activity": "Transport – Land",
+        "cause": "Caught in, under or between (excl. dropped objects)",
+        "similarity": 0.5884,
+        "source_file": "2024sf.pdf"
+      },
+      {
+        "report_id": "OSHA-20251111426",
+        "date": "2025-11-17",
+        "location": "United States",
+        "activity": "Roadway collision with other vehicle(s) moving and standing ",
+        "cause": "Fractures",
+        "similarity": 0.5751,
+        "source_file": "January2015toNovember2025.csv"
+      }
+    ]
+  },
+  {
+    "pattern_id": "hot-work-fire-explosion",
+    "pattern": "Recurring safety pattern detected: Hot Work / Flammable Atmosphere Flash Fire",
+    "title": "Hot Work / Flammable Atmosphere Flash Fire",
+    "occurrences": 25,
+    "strength": 0.21,
+    "average_strength": 0.08,
+    "primary_life_saving_rule": "Hot Work",
+    "primary_sif_precursor": "Hot Work",
+    "common_locations": [
+      "United States"
+    ],
+    "common_equipment": [
+      "Storage Tank",
+      "Grinder",
+      "Welding Equipment",
+      "Cutting Torch",
+      "Truck"
+    ],
+    "common_hazards": [
+      "Heat Stress",
+      "Burn / Thermal Injury",
+      "Fire / Flash Fire",
+      "Flammable Atmosphere",
+      "Explosion"
+    ],
+    "common_failed_barriers": [],
+    "common_exposures": [
+      "Employee",
+      "Welder",
+      "Mechanic",
+      "Maintenance Personnel"
+    ],
+    "common_consequences": [
+      "Heat (thermal) burns, unspecified",
+      "Third or fourth degree heat (thermal) burns",
+      "Thermal burns degree unspecified",
+      "Second degree heat (thermal) burns"
+    ],
+    "associated_life_saving_rules": [],
+    "associated_activities": [
+      "Ignition of vapors, gases, or liquids",
+      "Flash fire",
+      "Explosion of pressure vessel, piping, or tire",
+      "Explosion, unspecified"
+    ],
+    "report_ids": [
+      "OSHA-2021010547",
+      "OSHA-20181010561",
+      "OSHA-2019055443",
+      "OSHA-2015129883",
+      "OSHA-2019033037",
+      "OSHA-2025032197",
+      "OSHA-2023042894",
+      "OSHA-2019066318",
+      "OSHA-2022054170",
+      "OSHA-2016098612"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "OSHA-2021010547",
+        "date": "2021-01-20",
+        "location": "United States",
+        "activity": "Ignition of vapors, gases, or liquids",
+        "cause": "Second degree heat (thermal) burns",
+        "similarity": 0.6154,
+        "source_file": "January2015toNovember2025.csv"
+      },
+      {
+        "report_id": "OSHA-20181010561",
+        "date": "2018-10-12",
+        "location": "United States",
+        "activity": "Ignition of vapors, gases, or liquids",
+        "cause": "Heat (thermal) burns, unspecified",
+        "similarity": 0.6105,
+        "source_file": "January2015toNovember2025.csv"
+      },
+      {
+        "report_id": "OSHA-2019055443",
+        "date": "2019-05-30",
+        "location": "United States",
+        "activity": "Ignition of vapors, gases, or liquids",
+        "cause": "Heat (thermal) burns, unspecified",
+        "similarity": 0.6096,
+        "source_file": "January2015toNovember2025.csv"
+      }
+    ]
+  },
+  {
+    "pattern_id": "toxic-hazardous-release",
+    "pattern": "Recurring safety pattern detected: Toxic / Hazardous Substance Loss of Containment",
+    "title": "Toxic / Hazardous Substance Loss of Containment",
+    "occurrences": 25,
+    "strength": 0.2,
+    "average_strength": 0.06,
+    "primary_life_saving_rule": "Toxic / Hazardous Substances",
+    "primary_sif_precursor": "Process Safety / Loss of Primary Containment",
+    "common_locations": [
+      "United States",
+      "USA",
+      "Angola",
+      "Brazil"
+    ],
+    "common_equipment": [
+      "Valve",
+      "Storage Tank",
+      "Piping",
+      "Flange",
+      "Saw"
+    ],
+    "common_hazards": [
+      "Pressure Release",
+      "Chemical Exposure",
+      "Burn / Thermal Injury",
+      "Flammable Atmosphere",
+      "Toxic Substance"
+    ],
+    "common_failed_barriers": [
+      "The leak occurred because the weld was subject to accelerate",
+      "A leak from a hole in the surface casing allowed fluid and g",
+      "• Leak occurred in a relatively long and stagnant pipe secti"
+    ],
+    "common_exposures": [
+      "Employee",
+      "Maintenance Personnel",
+      "Operator",
+      "Contractor"
+    ],
+    "common_consequences": [
+      "Chemical burns and corrosions, unspecified",
+      "Chemical burns, corrosions degree unspecified",
+      "Poisoning, toxic, noxious, or allergenic effect, unspecified",
+      "Unspecified - Other"
+    ],
+    "associated_life_saving_rules": [],
+    "associated_activities": [
+      "Production operations",
+      "Pipeline operations",
+      "Exposure through intact skin, eyes, or other exposed tissue",
+      "Fall on same level resulting in exposure or contact"
+    ],
+    "report_ids": [
+      "2025pfh-NA-AM-ON-043",
+      "2025pfh-AS-OF-005",
+      "2020pfh-AF-OF-002",
+      "2025pfh-SA-&-CA-001",
+      "2025pfh-AS-ON-005",
+      "OSHA-2017065018",
+      "2025pfh-SA-&-CA-019",
+      "OSHA-2025066030",
+      "2021sh-NA-AM-ON-013",
+      "2020pfh-NA-AM-ON-034"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "2025pfh-NA-AM-ON-043",
+        "date": "2025-07-09",
+        "location": "USA",
+        "activity": "Production operations",
+        "cause": null,
+        "similarity": 0.5624,
+        "source_file": "2025pfh.pdf"
+      },
+      {
+        "report_id": "2025pfh-AS-OF-005",
+        "date": "2025-08-19",
+        "location": "Malaysia",
+        "activity": "Production operations",
+        "cause": null,
+        "similarity": 0.5583,
+        "source_file": "2025pfh.pdf"
+      },
+      {
+        "report_id": "2020pfh-AF-OF-002",
+        "date": "2020-10-23",
+        "location": "Angola",
+        "activity": "Production operations",
+        "cause": null,
+        "similarity": 0.5376,
+        "source_file": "2020pfh.pdf"
+      }
+    ]
+  },
+  {
+    "pattern_id": "pressurized-systems-release",
+    "pattern": "Recurring safety pattern detected: Pressurized System & Pressure Release",
+    "title": "Pressurized System & Pressure Release",
+    "occurrences": 12,
+    "strength": 0.3,
+    "average_strength": 0.08,
+    "primary_life_saving_rule": "Energy Isolation",
+    "primary_sif_precursor": "Pressure Release",
+    "common_locations": [
+      "USA",
+      "United States",
+      "Canada",
+      "Algeria"
+    ],
+    "common_equipment": [
+      "Flange",
+      "Valve",
+      "Piping",
+      "Storage Tank",
+      "Truck"
+    ],
+    "common_hazards": [
+      "Pressure Release",
+      "Fire / Flash Fire",
+      "Chemical Exposure",
+      "Struck-By Object",
+      "Explosion"
+    ],
+    "common_failed_barriers": [
+      "• inadequate planning/risk assessment/preparation/supervisio",
+      "Flange tightness was not meeting the requirements causing th",
+      "Tubing drain line split open, releasing H2S gas into the hig"
+    ],
+    "common_exposures": [
+      "Operator",
+      "Employee",
+      "Worker",
+      "Contractor"
+    ],
+    "common_consequences": [
+      "Unspecified - Other",
+      "Fractures",
+      "Explosion, fire or burns",
+      "Exposure noise, chemical, biological, vibration, extreme tem"
+    ],
+    "associated_life_saving_rules": [
+      "Energy Isolation",
+      "Bypassing Safety Controls",
+      "Safe Mechanical Lifting"
+    ],
+    "associated_activities": [
+      "Production operations",
+      "Maintenance, inspection, testing",
+      "Construction, commissioning, decommissioning",
+      "Drilling, workover, well operations"
+    ],
+    "report_ids": [
+      "2023sh-AF-ON-001",
+      "2025pfh-SA-&-CA-021",
+      "2023sh-NA-AM-ON-005",
+      "2025pfh-NA-AM-ON-083",
+      "2020pfh-NA-AM-ON-023",
+      "2022sh-EU-OF-002",
+      "2023sh-NA-AM-ON-011",
+      "OSHA-2020087790",
+      "2021sh-NA-AM-ON-013",
+      "2025pfh-NA-AM-ON-005"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "2023sh-AF-ON-001",
+        "date": "2023-01-04",
+        "location": "Algeria",
+        "activity": "Maintenance, inspection, testing",
+        "cause": "Unspecified - Other",
+        "similarity": 0.4644,
+        "source_file": "2023sh.pdf"
+      },
+      {
+        "report_id": "2025pfh-SA-&-CA-021",
+        "date": "2025-06-13",
+        "location": "USA",
+        "activity": "Production operations",
+        "cause": "Explosion, fire or burns",
+        "similarity": 0.4619,
+        "source_file": "2025pfh.pdf"
+      },
+      {
+        "report_id": "2023sh-NA-AM-ON-005",
+        "date": "2023-09-06",
+        "location": "Canada",
+        "activity": "Production operations",
+        "cause": "Exposure noise, chemical, biological, vibration, extreme temperature",
+        "similarity": 0.4496,
+        "source_file": "2023sh.pdf"
+      }
+    ]
+  },
+  {
+    "pattern_id": "energy-isolation-failure",
+    "pattern": "Recurring safety pattern detected: Energy Isolation Failure",
+    "title": "Energy Isolation Failure",
+    "occurrences": 6,
+    "strength": 0.45,
+    "average_strength": 0.19,
+    "primary_life_saving_rule": "Energy Isolation",
+    "primary_sif_precursor": "Energy Isolation Failure",
+    "common_locations": [
+      "United States",
+      "Indonesia",
+      "Australia",
+      "Iraq"
+    ],
+    "common_equipment": [
+      "Circuit Breaker",
+      "Flange",
+      "Pump",
+      "LOTO Locks",
+      "LOTO Tags"
+    ],
+    "common_hazards": [
+      "Electrical Energy",
+      "Energized Equipment",
+      "Arc Flash",
+      "Slip / Trip",
+      "Fire / Flash Fire"
+    ],
+    "common_failed_barriers": [
+      "Improper isolation of energy.",
+      "• Isolation was ineffective for the equipment, as the isolat",
+      "The panel mistakenly selected was live operating at Breaker "
+    ],
+    "common_exposures": [
+      "Contractor",
+      "Employee",
+      "Worker",
+      "Technician"
+    ],
+    "common_consequences": [
+      "Exposure electrical",
+      "Unspecified - Other",
+      "Electrical burns, unspecified",
+      "Electrocutions, electric shocks"
+    ],
+    "associated_life_saving_rules": [
+      "Energy Isolation",
+      "Line of Fire",
+      "Work Authorization"
+    ],
+    "associated_activities": [
+      "Maintenance, inspection, testing",
+      "Construction, commissioning, decommissioning",
+      "Direct exposure to electricity, greater than 220 volts",
+      "Direct exposure to electricity, unspecified"
+    ],
+    "report_ids": [
+      "2025sf-AS-ON-009",
+      "2023sh-AS-OF-002",
+      "2023sh-ME-EA-ON-004",
+      "2023sh-NA-AM-ON-019",
+      "OSHA-20211110012",
+      "OSHA-2021010782"
+    ],
+    "sample_reports": [
+      {
+        "report_id": "2025sf-AS-ON-009",
+        "date": "2025-03-27",
+        "location": "Indonesia",
+        "activity": "Maintenance, inspection, testing",
+        "cause": "Exposure electrical",
+        "similarity": 0.4606,
+        "source_file": "2025sf.pdf"
+      },
+      {
+        "report_id": "2023sh-AS-OF-002",
+        "date": "2023-01-13",
+        "location": "Australia",
+        "activity": "Maintenance, inspection, testing",
+        "cause": "Exposure electrical",
+        "similarity": 0.4558,
+        "source_file": "2023sh.pdf"
+      },
+      {
+        "report_id": "2023sh-ME-EA-ON-004",
+        "date": "2023-10-19",
+        "location": "Iraq",
+        "activity": "Construction, commissioning, decommissioning",
+        "cause": "Unspecified - Other",
+        "similarity": 0.4422,
+        "source_file": "2023sh.pdf"
+      }
+    ]
+  }
+]

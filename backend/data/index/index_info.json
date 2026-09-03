@@ -1,0 +1,12 @@
+{
+  "model_name": "all-MiniLM-L6-v2",
+  "dimension": 384,
+  "total_vectors": 106878,
+  "dataset_fingerprint": {
+    "exists": true,
+    "size": 82279771,
+    "mtime": 1788283159.3227756
+  },
+  "build_time_seconds": 717.69,
+  "created_at": "2026-09-01T18:06:10Z"
+}

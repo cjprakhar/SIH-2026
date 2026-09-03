@@ -1,0 +1,4 @@
+backend/data/reports.json filter=lfs diff=lfs merge=lfs -text
+backend/data/index/faiss.index filter=lfs diff=lfs merge=lfs -text
+backend/data/index/metadata.json filter=lfs diff=lfs merge=lfs -text
+backend/data/csv/January2015toNovember2025.csv filter=lfs diff=lfs merge=lfs -text

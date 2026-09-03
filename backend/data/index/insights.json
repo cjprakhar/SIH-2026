@@ -1,0 +1,336 @@
+{
+  "summary": {
+    "total_reports": 106878,
+    "fatal_incidents_recorded": 117,
+    "pdf_iogp_reports": 887,
+    "osha_severe_injuries": 105991,
+    "active_recurring_patterns_count": 9,
+    "vector_index_size": 106878,
+    "last_updated": "2026-09-02T16:08:11Z"
+  },
+  "reports_by_year": {
+    "1900": 1,
+    "2015": 9818,
+    "2016": 10084,
+    "2017": 10445,
+    "2018": 11156,
+    "2019": 11071,
+    "2020": 9106,
+    "2021": 8841,
+    "2022": 9244,
+    "2023": 9091,
+    "2024": 9055,
+    "2025": 8966
+  },
+  "reports_by_source_type": {
+    "pdf_pse": 412,
+    "pdf_fatal": 117,
+    "pdf_hipot": 358,
+    "csv_osha": 105991
+  },
+  "life_saving_rules_frequency": [
+    {
+      "rule": "Line of Fire",
+      "count": 158
+    },
+    {
+      "rule": "Safe Mechanical Lifting",
+      "count": 58
+    },
+    {
+      "rule": "Energy Isolation",
+      "count": 45
+    },
+    {
+      "rule": "Bypassing Safety Controls",
+      "count": 42
+    },
+    {
+      "rule": "Work Authorization",
+      "count": 41
+    },
+    {
+      "rule": "Working at Height",
+      "count": 36
+    },
+    {
+      "rule": "Other issue",
+      "count": 35
+    },
+    {
+      "rule": "Driving",
+      "count": 30
+    },
+    {
+      "rule": "Hot Work",
+      "count": 10
+    },
+    {
+      "rule": "Confined Space",
+      "count": 4
+    },
+    {
+      "rule": "Other issue\n41\n2021 safety data – High potential event reports",
+      "count": 1
+    }
+  ],
+  "top_activities": [
+    {
+      "activity": "Caught in running equipment or machinery during regular operation",
+      "count": 6694
+    },
+    {
+      "activity": "Other fall to lower level, unspecified",
+      "count": 5921
+    },
+    {
+      "activity": "Caught in running equipment or machinery during maintenance, cleaning",
+      "count": 5298
+    },
+    {
+      "activity": "Compressed or pinched by shifting objects or equipment",
+      "count": 4985
+    },
+    {
+      "activity": "Other fall to lower level less than 6 feet",
+      "count": 4009
+    },
+    {
+      "activity": "Fall on same level due to slipping",
+      "count": 3680
+    },
+    {
+      "activity": "Fall on same level due to tripping over an object",
+      "count": 2660
+    },
+    {
+      "activity": "Struck against moving part of machinery or equipment",
+      "count": 2235
+    },
+    {
+      "activity": "Exposure to environmental heat",
+      "count": 2196
+    },
+    {
+      "activity": "Caught in or compressed by equipment or objects, unspecified",
+      "count": 2152
+    },
+    {
+      "activity": "Injured by slipping or swinging object held by injured worker",
+      "count": 2124
+    },
+    {
+      "activity": "Struck by falling object or equipment, n.e.c.",
+      "count": 1936
+    }
+  ],
+  "top_causes": [
+    {
+      "cause": "Fractures",
+      "count": 34836
+    },
+    {
+      "cause": "Amputations",
+      "count": 23447
+    },
+    {
+      "cause": "Soreness, pain, hurt-nonspecified injury",
+      "count": 6520
+    },
+    {
+      "cause": "Cuts, lacerations",
+      "count": 4267
+    },
+    {
+      "cause": "Amputations, avulsions, enucleations unspecified",
+      "count": 2924
+    },
+    {
+      "cause": "Intracranial injuries, unspecified",
+      "count": 1798
+    },
+    {
+      "cause": "Traumatic injuries and disorders, unspecified",
+      "count": 1729
+    },
+    {
+      "cause": "Heat (thermal) burns, unspecified",
+      "count": 1726
+    },
+    {
+      "cause": "Crushing injuries",
+      "count": 1723
+    },
+    {
+      "cause": "Internal injuries to organs and blood vessels of the trunk",
+      "count": 1516
+    },
+    {
+      "cause": "Amputations involving bone loss",
+      "count": 1515
+    },
+    {
+      "cause": "Puncture wounds, except gunshot wounds",
+      "count": 1252
+    }
+  ],
+  "top_recurring_patterns": [
+    {
+      "pattern_id": "line-of-fire-dropped-object",
+      "title": "Line of Fire / Dropped Object",
+      "occurrences": 25,
+      "strength": 0.46,
+      "primary_life_saving_rule": "Line of Fire"
+    },
+    {
+      "pattern_id": "working-at-height-scaffolding",
+      "title": "Working at Height & Scaffold Fall",
+      "occurrences": 25,
+      "strength": 0.46,
+      "primary_life_saving_rule": "Working at Height"
+    },
+    {
+      "pattern_id": "confined-space-entry",
+      "title": "Confined Space & Hazardous Atmosphere",
+      "occurrences": 25,
+      "strength": 0.46,
+      "primary_life_saving_rule": "Confined Space"
+    },
+    {
+      "pattern_id": "safe-mechanical-lifting",
+      "title": "Safe Mechanical Lifting & Rigging Failure",
+      "occurrences": 25,
+      "strength": 0.46,
+      "primary_life_saving_rule": "Safe Mechanical Lifting"
+    },
+    {
+      "pattern_id": "vehicle-driving-transport",
+      "title": "Vehicle / Mobile Equipment & Driving Incidents",
+      "occurrences": 25,
+      "strength": 0.46,
+      "primary_life_saving_rule": "Driving"
+    },
+    {
+      "pattern_id": "hot-work-fire-explosion",
+      "title": "Hot Work / Flammable Atmosphere Flash Fire",
+      "occurrences": 25,
+      "strength": 0.21,
+      "primary_life_saving_rule": "Hot Work"
+    },
+    {
+      "pattern_id": "toxic-hazardous-release",
+      "title": "Toxic / Hazardous Substance Loss of Containment",
+      "occurrences": 25,
+      "strength": 0.2,
+      "primary_life_saving_rule": "Toxic / Hazardous Substances"
+    },
+    {
+      "pattern_id": "pressurized-systems-release",
+      "title": "Pressurized System & Pressure Release",
+      "occurrences": 12,
+      "strength": 0.3,
+      "primary_life_saving_rule": "Energy Isolation"
+    },
+    {
+      "pattern_id": "energy-isolation-failure",
+      "title": "Energy Isolation Failure",
+      "occurrences": 6,
+      "strength": 0.45,
+      "primary_life_saving_rule": "Energy Isolation"
+    }
+  ],
+  "geographic_distribution": {
+    "top_countries": [
+      {
+        "country": "United States",
+        "count": 105991
+      },
+      {
+        "country": "USA",
+        "count": 253
+      },
+      {
+        "country": "Brazil",
+        "count": 48
+      },
+      {
+        "country": "Qatar",
+        "count": 45
+      },
+      {
+        "country": "Norway",
+        "count": 41
+      },
+      {
+        "country": "Canada",
+        "count": 39
+      },
+      {
+        "country": "Argentina",
+        "count": 33
+      },
+      {
+        "country": "Kuwait",
+        "count": 32
+      },
+      {
+        "country": "Oman",
+        "count": 30
+      },
+      {
+        "country": "Nigeria",
+        "count": 27
+      }
+    ],
+    "top_regions_states": [
+      {
+        "region": "Texas",
+        "count": 17490
+      },
+      {
+        "region": "Florida",
+        "count": 11708
+      },
+      {
+        "region": "Pennsylvania",
+        "count": 8361
+      },
+      {
+        "region": "Ohio",
+        "count": 8253
+      },
+      {
+        "region": "Illinois",
+        "count": 6393
+      },
+      {
+        "region": "Georgia",
+        "count": 5984
+      },
+      {
+        "region": "New York",
+        "count": 5287
+      },
+      {
+        "region": "Wisconsin",
+        "count": 4301
+      },
+      {
+        "region": "Alabama",
+        "count": 3536
+      },
+      {
+        "region": "Missouri",
+        "count": 3263
+      },
+      {
+        "region": "Colorado",
+        "count": 3212
+      },
+      {
+        "region": "New Jersey",
+        "count": 2691
+      }
+    ]
+  }
+}
