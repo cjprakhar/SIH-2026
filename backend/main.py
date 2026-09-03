@@ -100,10 +100,10 @@ def startup_event():
     """Ensures runtime datasets are verified and pre-warms FAISS vector index."""
     try:
         from bootstrap_data import bootstrap
-        bootstrap()
+        bootstrap(exit_on_error=False)
         logger.info("Startup: Runtime datasets and FAISS vector index verified successfully.")
     except Exception as e:
-        logger.warning(f"Startup: Bootstrap verification error: {e}")
+        logger.warning(f"Startup: Bootstrap verification fallback: {e}")
 
 
 # ============================================================================

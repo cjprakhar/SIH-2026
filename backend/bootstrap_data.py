@@ -164,8 +164,11 @@ def verify_all_runtime_data():
     logger.info(f"Vector index loaded: {total_records:,} records, status: '{idx_status}'.")
 
 
-def bootstrap():
-    """Main bootstrap sequence to ensure data availability before server launch."""
+def bootstrap(exit_on_error: bool = True) -> bool:
+    """
+    Main bootstrap sequence to ensure data availability before server launch.
+    Returns True if data is verified and ready, False otherwise.
+    """
     logger.info("Starting SIF Intelligence runtime data verification...")
 
     # Identify which large files need downloading
@@ -194,17 +197,26 @@ def bootstrap():
 
     # Download if needed
     if required_downloads:
-        hf_token = os.getenv("HF_TOKEN")
+        raw_token = (
+            os.getenv("HF_TOKEN")
+            or os.getenv("HUGGING_FACE_HUB_TOKEN")
+            or os.getenv("HUGGINGFACE_TOKEN")
+            or ""
+        )
+        hf_token = raw_token.strip() or None
+
         if not hf_token:
-            # Check if running in Railway
             is_railway = bool(
                 os.getenv("RAILWAY_ENVIRONMENT")
                 or os.getenv("RAILWAY_SERVICE_ID")
                 or os.getenv("RAILWAY_PROJECT_ID")
+                or os.getenv("PORT")
             )
             if is_railway:
                 logger.error("HF_TOKEN is not configured for the Railway runtime.")
-                sys.exit(1)
+                if exit_on_error:
+                    sys.exit(1)
+                return False
             else:
                 logger.warning("HF_TOKEN not set; attempting unauthenticated download...")
 
@@ -217,10 +229,14 @@ def bootstrap():
 
                 if is_lfs_pointer_or_invalid(target_path):
                     logger.error(f"Download of '{filename}' produced an invalid or undersized file.")
-                    sys.exit(1)
+                    if exit_on_error:
+                        sys.exit(1)
+                    return False
             except Exception as e:
                 logger.error(f"Failed downloading '{filename}' from Hugging Face: {e}")
-                sys.exit(1)
+                if exit_on_error:
+                    sys.exit(1)
+                return False
     else:
         logger.info("All required runtime datasets are present and valid on disk.")
 
@@ -232,10 +248,13 @@ def bootstrap():
         verify_all_runtime_data()
     except Exception as e:
         logger.error(f"Runtime data verification error: {e}")
-        sys.exit(1)
+        if exit_on_error:
+            sys.exit(1)
+        return False
 
     logger.info("Bootstrap successful: all runtime datasets verified and ready.")
+    return True
 
 
 if __name__ == "__main__":
-    bootstrap()
+    bootstrap(exit_on_error=True)
