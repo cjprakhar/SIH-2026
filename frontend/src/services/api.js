@@ -1,9 +1,13 @@
 /**
  * SIF Intelligence API Client Service
- * Connects to FastAPI backend at http://localhost:8000
+ * Connects to the FastAPI backend configured by the Vite environment.
  */
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (
+  import.meta.env.PROD
+    ? 'https://sih-2026-production-44ca.up.railway.app'
+    : 'http://127.0.0.1:8000'
+);
 
 async function fetchJSON(endpoint, options = {}) {
   const url = `${API_BASE_URL}${endpoint}`;

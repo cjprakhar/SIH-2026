@@ -42,10 +42,14 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS Middleware for future frontend connectivity
+# CORS Middleware for local development and the deployed frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://127.0.0.1:5173",
+        "http://localhost:5173",
+        "https://sif-intelligence.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
