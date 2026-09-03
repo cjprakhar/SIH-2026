@@ -13,6 +13,7 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme === 'light' ? 'light' : 'dark';
     localStorage.setItem('sif-theme', theme);
   }, [theme]);
 

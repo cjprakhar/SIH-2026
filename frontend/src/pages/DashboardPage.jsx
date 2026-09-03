@@ -103,13 +103,8 @@ export default function DashboardPage({ setActiveTab }) {
   const highPriorityCount = fatalIncidents + hipotIncidents; // 475
   const lsrFreq = insights?.life_saving_rules_frequency || [];
   const lsrTotalCount = lsrFreq.reduce((sum, item) => sum + item.count, 0) || 460;
-  const reportsByYear = insights?.reports_by_year || {};
-
-  // Valid years for trend chart
-  const validYears = Object.entries(reportsByYear)
-    .filter(([yr]) => parseInt(yr) >= 2016 && parseInt(yr) <= 2026)
-    .sort(([a], [b]) => parseInt(a) - parseInt(b));
-  const maxYearCount = Math.max(...validYears.map(([_, count]) => count), 1);
+  const recurringSafetyProblems = lsrFreq.slice(0, 5);
+  const maxRecurringProblemCount = Math.max(...recurringSafetyProblems.map((item) => item.count), 1);
 
   // Severity Distribution Data
   const severityTiers = [
@@ -187,7 +182,7 @@ export default function DashboardPage({ setActiveTab }) {
     <div className="dashboard-page">
       
       {/* 1. HERO SECTION */}
-      <div className="hero-container">
+      <div className="hero-container dashboard-hero">
         {/* Left Hero Content */}
         <div style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
@@ -340,10 +335,10 @@ export default function DashboardPage({ setActiveTab }) {
           </button>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
+        <div className="dashboard-kpi-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
           
           {/* KPI 1: Reports Analyzed */}
-          <div className="card" style={{ padding: '18px 20px' }}>
+          <div className="card dashboard-kpi-card" style={{ padding: '18px 20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
               <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 800, letterSpacing: '0.05em' }}>
                 REPORTS ANALYZED
@@ -359,7 +354,7 @@ export default function DashboardPage({ setActiveTab }) {
           </div>
 
           {/* KPI 2: SIF Precursor Signals */}
-          <div className="card" style={{ padding: '18px 20px' }}>
+          <div className="card dashboard-kpi-card" style={{ padding: '18px 20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
               <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 800, letterSpacing: '0.05em' }}>
                 SIF PRECURSOR SIGNALS
@@ -375,7 +370,7 @@ export default function DashboardPage({ setActiveTab }) {
           </div>
 
           {/* KPI 3: High-Priority Reports */}
-          <div className="card" style={{ padding: '18px 20px' }}>
+          <div className="card dashboard-kpi-card" style={{ padding: '18px 20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
               <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 800, letterSpacing: '0.05em' }}>
                 HIGH-PRIORITY REPORTS
@@ -391,7 +386,7 @@ export default function DashboardPage({ setActiveTab }) {
           </div>
 
           {/* KPI 4: Repeated Safety Problems */}
-          <div className="card" style={{ padding: '18px 20px' }}>
+          <div className="card dashboard-kpi-card" style={{ padding: '18px 20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
               <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 800, letterSpacing: '0.05em' }}>
                 REPEATED SAFETY PROBLEMS
@@ -413,7 +408,7 @@ export default function DashboardPage({ setActiveTab }) {
       <div className="grid-2" style={{ marginBottom: '28px' }}>
         
         {/* Left: HOW SERIOUS IS THE RISK? */}
-        <div className="card">
+        <div className="card dashboard-risk-card">
           <div style={{ marginBottom: '14px' }}>
             <h3 className="section-question">HOW SERIOUS IS THE RISK?</h3>
             <div className="section-subtitle">Severity breakdown across analyzed Life-Saving Rule precursor events</div>
@@ -447,44 +442,41 @@ export default function DashboardPage({ setActiveTab }) {
           </div>
         </div>
 
-        {/* Right: WHAT IS CHANGING? */}
-        <div className="card">
+        {/* Right: WHICH SAFETY PROBLEMS KEEP APPEARING? */}
+        <div className="card dashboard-pattern-summary">
           <div style={{ marginBottom: '14px' }}>
-            <h3 className="section-question">WHAT IS CHANGING?</h3>
-            <div className="section-subtitle">Historical report volume trend across global operations (2016–2026)</div>
+            <h3 className="section-question">WHICH SAFETY PROBLEMS KEEP APPEARING?</h3>
+            <div className="section-subtitle">Recurring Life-Saving Rule signals across historical safety records</div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px', height: '165px', paddingTop: '10px' }}>
-            {validYears.map(([year, count]) => {
-              const heightPct = Math.max(10, Math.round((count / maxYearCount) * 100));
-              const isCurrent = year === '2026';
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', paddingTop: '4px' }}>
+            {recurringSafetyProblems.map((item, index) => {
+              const widthPct = Math.max(8, Math.round((item.count / maxRecurringProblemCount) * 100));
+              const colors = ['var(--risk-critical)', 'var(--risk-high)', 'var(--risk-medium)', 'var(--brand-blue)', 'var(--brand-emerald)'];
               return (
                 <div 
-                  key={year}
+                  key={item.rule}
                   style={{
-                    flex: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
-                    height: '100%',
-                    justifyContent: 'flex-end',
+                    gap: '5px',
                   }}
                 >
-                  <div style={{ fontSize: '0.62rem', color: 'var(--text-muted)', marginBottom: '4px', fontWeight: 600 }}>
-                    {count > 1000 ? `${(count / 1000).toFixed(0)}k` : count}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', fontSize: '0.76rem' }}>
+                    <span style={{ color: 'var(--text-primary)', fontWeight: 700 }}>{item.rule}</span>
+                    <strong style={{ color: colors[index], whiteSpace: 'nowrap' }}>{item.count.toLocaleString()} signals</strong>
                   </div>
-                  <div 
-                    style={{
-                      width: '100%',
-                      height: `${heightPct}%`,
-                      background: isCurrent ? 'var(--brand-blue)' : 'var(--border-medium)',
-                      borderRadius: '4px 4px 0 0',
-                      transition: 'all 0.25s ease',
-                    }}
-                    title={`${year}: ${count.toLocaleString()} reports`}
-                  />
-                  <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', marginTop: '6px', fontWeight: 600 }}>
-                    '{year.slice(2)}
+                  <div style={{ height: '8px', width: '100%', background: 'var(--border-subtle)', borderRadius: 'var(--radius-full)', overflow: 'hidden' }}>
+                    <div
+                      style={{
+                        width: `${widthPct}%`,
+                        height: '100%',
+                        background: colors[index],
+                        borderRadius: 'var(--radius-full)',
+                        transition: 'width 0.25s ease',
+                      }}
+                      title={`${item.rule}: ${item.count.toLocaleString()} recurring signals`}
+                    />
                   </div>
                 </div>
               );
@@ -495,7 +487,7 @@ export default function DashboardPage({ setActiveTab }) {
       </div>
 
       {/* 4. PRIORITY SECTION: WHICH REPORTS NEED ATTENTION FIRST? */}
-      <div id="priority-reports-section" className="card" style={{ marginBottom: '28px' }}>
+      <div id="priority-reports-section" className="card dashboard-priority-card" style={{ marginBottom: '28px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
           <div>
             <h3 className="section-question">WHICH REPORTS NEED ATTENTION FIRST?</h3>
@@ -580,7 +572,7 @@ export default function DashboardPage({ setActiveTab }) {
       </div>
 
       {/* 5. RECURRING PATTERNS: ARE WE SEEING THE SAME PROBLEM AGAIN? */}
-      <div className="card" style={{ marginBottom: '28px' }}>
+      <div className="card dashboard-patterns-card" style={{ marginBottom: '28px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
           <div>
             <h3 className="section-question">ARE WE SEEING THE SAME PROBLEM AGAIN?</h3>
@@ -651,7 +643,7 @@ export default function DashboardPage({ setActiveTab }) {
       </div>
 
       {/* 6. ACTION SECTION: WHAT SHOULD WE DO FIRST? */}
-      <div className="card" style={{ marginBottom: '28px' }}>
+      <div className="card dashboard-actions-card" style={{ marginBottom: '28px' }}>
         <div style={{ marginBottom: '14px' }}>
           <h3 className="section-question">WHAT SHOULD WE DO FIRST?</h3>
           <div className="section-subtitle">Recommended barrier reinforcements grounded in actual incident patterns</div>
