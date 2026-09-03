@@ -94,17 +94,40 @@ class BuildIndexRequest(BaseModel):
     batch_size: int = Field(default=512, ge=64, le=2048, description="Embedding batch size")
 
 
+# Startup Event to Pre-warm Vector Index & Metadata
+@app.on_event("startup")
+def startup_event():
+    """Pre-warms FAISS vector index and report metadata on application startup."""
+    try:
+        from recurrence import load_index
+        load_index()
+        logger.info("Startup: FAISS vector index and metadata successfully initialized.")
+    except Exception as e:
+        logger.warning(f"Startup: Pre-warming index failed (will initialize on-demand): {e}")
+
+
 # ============================================================================
 # System Endpoints
 # ============================================================================
 
 @app.get("/health", tags=["System"])
 def health_check():
-    """Health check endpoint to verify API service status."""
+    """Health check endpoint to verify API service and data readiness status."""
+    from recurrence import _FAISS_INDEX, _INDEXED_METADATA, INDEX_DIR, REPORTS_FILE
+
+    data_ready = (
+        REPORTS_FILE.exists()
+        and (INDEX_DIR / "faiss.index").exists()
+        and (INDEX_DIR / "metadata.json").exists()
+    )
+    index_ready = _FAISS_INDEX is not None and _INDEXED_METADATA is not None
+
     return {
-        "status": "healthy",
+        "status": "healthy" if (data_ready and index_ready) else "degraded",
         "service": "SIF Intelligence API",
         "version": "1.0.0",
+        "data_ready": data_ready,
+        "index_ready": index_ready,
     }
 
 
